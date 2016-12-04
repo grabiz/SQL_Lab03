@@ -99,18 +99,24 @@ INSERT INTO SINH_VIEN VALUES
 ('CP001','Tran Quang Minh','2011387436','23/12/1987',1,'0905123321','KTV14'),
 ('CP002','Nguyen Vinh Giang','2343433344','24/12/1986',1,'0905122222','KTV14'),
 ('CP003','Le Quy Binh','2342233322','11/1/1986',1,'0905122222','B14'),
-CP004	Nguyen Van	Vinh	2343432233	24/2/1986	2	0905122222	B14
-CP005	Ly Thanh	Hoa	2343435544	22/12/1986	2	0905122222	B09
-CP006	Mai Chau	Quynh	2343435544	21/12/1986	2	0905122222	B09
-CP007	Le Van	Hai	2377333447	20/12/1986	3	0905122222	KTV14
-CP008	Nguyen Cong	Dinh	2377333447	18/12/1986	3	0905122222	KTV14
-CP009	Tran Vinh	Trinh	2343434439	24/12/1986	3	0905122222	KTV14
-CP010	Nguyen Vinh	Giang	2343433344	24/12/1986	1	0905122222	KTV14)
+('CP004','Nguyen Van Vinh','2343432233','24/2/1986',2,'0905122222','B14'),
+('CP005','Ly Thanh Hoa','2343435544','22/12/1986',2,'0905122222','B09'),
+('CP006','Mai Chau Quynh','2343435544','21/12/1986',2,'0905122222','B09'),
+('CP007','Le Van Hai','2377333447','20/12/1986',3,'0905122222','KTV14'),
+('CP008','Nguyen Cong Dinh','2377333447','18/12/1986',3,'0905122222','KTV14'),
+('CP009','Tran Vinh	Trinh','2343434439','24/12/1986',3,'0905122222','KTV14'),
+('CP010','Nguyen Vinh Giang','2343433344','24/12/1986',1,'0905122222','KTV14');
+
 Bảng: QUE_QUAN
 Quequan	Ghichu
 Quang Nam	
 Da Nang	Thanh pho thuoc TW
 Quang Ngai	
+
+INSERT INTO QUE_QUAN VALUES
+('Quang Nam',NULL),
+('Da Nang','Thanh pho thuoc TW'),
+('Quang Ngai',NULL);
 
 Bảng: MON_HOC
 MaMH	TenMH	Ghichu
@@ -119,11 +125,22 @@ XML	XML by Example
 EPC	Programming with C	Lap trinh co ban C
 ENG	English in computer	Anh van
 
+INSERT INTO MON_HOC VALUES
+('RDBMS','SQL Server 2005','He quan tri CSDL quan he'),
+('XML','XML by Example',NULL),	
+('EPC','Programming with C','Lap trinh co ban C'),
+('ENG','English in computer','Anh van');
+
 Bảng: LOP_HOC
 Malop	Tenlop	Suathoc
 KTV14	Ky thuat vien 14	17h30-21h30, 2-4-6
 B14	Lap trinh vien 14	17h30-21h30, 3-5-7
 B09	Lap trinh vien 09	7h30-11h30, 2-4-6
+
+INSERT INTO LOP_HOC VALUES
+('KTV14','Ky thuat vien 14','17h30-21h30, 2-4-6'),
+('B14','Lap trinh vien 14','17h30-21h30, 3-5-7'),
+('B09','Lap trinh vien 09','7h30-11h30, 2-4-6');
 
 Bảng: DIEM
 MaMH	MaSV	Diem	Ghichu
@@ -139,6 +156,18 @@ RDBMS	CP008	10
 XML	CP009	20	
 XML	CP010	19	
 */
+INSERT INTO DIEM VALUES
+('RDBMS','CP001',12,NULL),	
+('RDBMS','CP002',10,NULL),	
+('RDBMS','CP003',8,NULL),	
+('XML','CP001',10,NULL),	
+('XML','CP002',12,NULL),	
+('RDBMS','CP004',8,NULL),	
+('RDBMS','CP005',24,NULL),	
+('RDBMS','CP005',10,NULL),	
+('RDBMS','CP008',10,NULL),	
+('XML','CP009',20,NULL),	
+('XML','CP010',19,NULL);	
 /*8.	Viết câu lệnh TSQL thực hiện các công việc sau:*/
 /*a.	Viết câu lệnh truy vấn liệt kê tất cả tên của các lớp học có trong bảng lớp học.*/
 SELECT Tenlop
